@@ -14,3 +14,7 @@ ___
   首先就是大家都头疼的一个问题,网卡的适配问题.
   我们队先后尝试过官方的无线网卡,网线连接,其他驱动移植等方法,效果都不太理想.
   在经历了两天,拖着三米长的网线跟着车跑的尴尬局面之后,本人忍无可忍,想到了一个非常天才的解决方法,最终实现效果好极了.
+  
+<div align=center><img src="https://github.com/thezhangy937/smart-car-baidu---/blob/main/Picture/e9960930beeacee865337b17b8f894f.jpg" width="20%">
+<div align=center><img src="https://github.com/thezhangy937/smart-car-baidu---/blob/main/Picture/bab32b52ae0f22e7ba38864bcff7581.jpg" width="20%">
+<video controls src="https://github.com/thezhangy937/smart-car-baidu---/blob/main/Picture/4c67c7f59180d53710e990d83695abe6.mp4"></video>
