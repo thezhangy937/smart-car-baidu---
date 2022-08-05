@@ -1,4 +1,7 @@
+
+
 # smart-car-baidu---
+
 飞思卡尔智能车17届完全模型组部分资料开源
 ## 由于我们组只是来玩智能车的，对奖项和速度没有太高的欲望
 ## 因此把时间精力花在了优化调车体验上面，现在进行一个简单的分享
@@ -14,7 +17,46 @@ ___
   首先就是大家都头疼的一个问题,网卡的适配问题.
   我们队先后尝试过官方的无线网卡,网线连接,其他驱动移植等方法,效果都不太理想.
   在经历了两天,拖着三米长的网线跟着车跑的尴尬局面之后,本人忍无可忍,想到了一个非常天才的解决方法,最终实现效果好极了.
-  
-<div align=center><img src="https://github.com/thezhangy937/smart-car-baidu---/blob/main/Picture/e9960930beeacee865337b17b8f894f.jpg" width="20%">
-<div align=center><img src="https://github.com/thezhangy937/smart-car-baidu---/blob/main/Picture/bab32b52ae0f22e7ba38864bcff7581.jpg" width="20%">
-<video controls src="https://github.com/thezhangy937/smart-car-baidu---/blob/main/Picture/4c67c7f59180d53710e990d83695abe6.mp4"></video>
+
+<div align=center><img src="./Picture/e9960930beeacee865337b17b8f894f.jpg" width="20%">
+<div align=center><img src="./Picture/bab32b52ae0f22e7ba38864bcff7581.jpg" width="20%">
+
+<iframe height=300 width=300 src="./Picture/4c67c7f59180d53710e990d83695abe6.mp4">
+
+   实现的思路其实群里有老哥也已经发现了,既然网卡出错的原因是USB带宽不足,那干脆就不走USB口
+
+   一开始本来是想用串口的,毕竟摄像头组别的无线图传也比较成熟了,无论是自己开发还是成品都可以买,但也有老哥提到edgeboard的串口也存在延迟,而且这个方案的上限太低了
+
+   最后感谢万能的淘宝,找到了给摄像头监控用的无线网桥,原理是把rj45有线网的信号转成无线网络进行数据传输,从实现原理上达到了免驱,实际使用效果还行
+
+   这里就不放链接了,毕竟我们当时时间宝贵,直接买了200+的5g版本,事实证明根本跑不了这么高的速度,理论上只要是无线网桥就行,大家备战18届的有充足的时间踩坑(๑*◡*๑)(好吧给土豪们留一个算了https://m.tb.cn/h.fyRJVZz?tk=CkEd2sIl2ku)
+
+   最终的实现效果上,网络连接非常稳定,传输小的视频流没什么压力,命令行无延迟,基本实现了所有的需求.
+
+---
+
+## 机械结构优化
+
+​	开源一部分车壳的建模,仅供大家标定尺寸,放在moddle目录下,<font color="blue">无法直接3D打印,必须修改</font>,希望大家充分发挥自己的创意
+​<font color="red">下图中红框的四个孔位以及蓝圈中的轮胎开孔已经打印测试,误差在可以接受的范围内,其他部分请针对自己的机械结构自行修改</font>
+
+ <font color="red">下图中红框的四个孔位以及蓝圈中的轮胎开孔已经打印测试,误差在可以接受的范围内,其他部分请针对自己的机械结构自行修改</font>
+
+ <font color="red">下图中红框的四个孔位以及蓝圈中的轮胎开孔已经打印测试,误差在可以接受的范围内,其他部分请针对自己的机械结构自行修改</font>
+
+<div align=center><img src="./Picture/1.jpg" width="100%">
+
+	基准面说明:
+	上视基准面为底面
+	左视基准面为外壳左面靠内侧
+	内部器件高度基准面为官方edgeboard摆放的高度,引擎盖部分需要比这个高
+
+<div align=center><img src="./Picture/2.png" width="40%">
+
+	建模注意事项:
+	如果不打算预留防撞板的话,车壳最前端到舵机的高度变化非常距离,需要处理好
+	由于此车模前轮打角范围很大,建模时一定要留出足够大的空间,大致像下图画的轮廓做一个切割
+	摄像头开孔建议自行设计方便拆卸
+	底部固定孔位建议花点心思弄成金属孔位,否则多次拆卸会造成孔位松动难以固定
+<div align=center><img src="./Picture/3.png" width="80%">
+​	
