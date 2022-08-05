@@ -20,8 +20,7 @@ ___
 
 <div align=center><img src="./Picture/e9960930beeacee865337b17b8f894f.jpg" width="20%">
 <div align=center><img src="./Picture/bab32b52ae0f22e7ba38864bcff7581.jpg" width="20%">
-
-<iframe height=300 width=300 src="./Picture/4c67c7f59180d53710e990d83695abe6.mp4">
+<div align=left>
 
    实现的思路其实群里有老哥也已经发现了,既然网卡出错的原因是USB带宽不足,那干脆就不走USB口
 
@@ -38,6 +37,7 @@ ___
 ## 机械结构优化
 
 ​	开源一部分车壳的建模,仅供大家标定尺寸,放在moddle目录下,<font color="blue">无法直接3D打印,必须修改</font>,希望大家充分发挥自己的创意
+
 ​<font color="red">下图中红框的四个孔位以及蓝圈中的轮胎开孔已经打印测试,误差在可以接受的范围内,其他部分请针对自己的机械结构自行修改</font>
 
  <font color="red">下图中红框的四个孔位以及蓝圈中的轮胎开孔已经打印测试,误差在可以接受的范围内,其他部分请针对自己的机械结构自行修改</font>
