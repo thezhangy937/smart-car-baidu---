@@ -1,8 +1,3 @@
----
-typora-root-url: ./
----
-
-
 
 # smart-car-baidu---
 
@@ -35,7 +30,6 @@ ___
 <div align=center><img src="./Picture/e9960930beeacee865337b17b8f894f.jpg" width="20%">
 <div align=center><img src="./Picture/bab32b52ae0f22e7ba38864bcff7581.jpg" width="20%">
 
-<iframe height=300 width=300 src="./Picture/4c67c7f59180d53710e990d83695abe6.mp4">
 
    实现的思路其实群里有老哥也已经发现了,既然网卡出错的原因是USB带宽不足,那干脆就不走USB口
 
